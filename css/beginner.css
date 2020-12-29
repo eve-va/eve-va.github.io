@@ -1,0 +1,79 @@
+#difficulty0 h1, #difficulty0 h3 {
+    text-align: center;
+    color: darkgreen;
+    margin: 10px auto;
+}
+
+#difficulty0 #game_container{
+    box-shadow: darkgreen 0 0 30px;
+    border: 5px solid darkgreen;
+}
+
+#difficulty0 #cell0, #difficulty0 #cell1 {
+    width: 20px;
+    height: 20px;
+    border: 1px solid darkgreen;
+    padding: 10px;
+    background-color: seagreen;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+  }
+  
+#difficulty0 #cell1 {
+    background-color: lightgreen;
+}
+  
+#cell0.revealed, #cell0.flagged, #cell1.revealed, #cell1.flagged {
+    cursor: default;
+}
+
+#difficulty0 #cell0.revealed {
+    background-color: #d0f0c0;
+}
+
+#difficulty0 #cell1.revealed {
+    background-color: white;
+}
+  
+#difficulty0 #new_game_button {
+    margin: auto 150px;
+    padding: 10px;
+    width: 12em;
+    height: 3em;
+    line-height: 3em;
+    font-size: 1.5em;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+    border: 5px solid darkgreen;
+    border-radius: 10px;
+    color: darkgreen;
+    background-color: transparent;
+}
+  
+#difficulty0 #new_game_button:hover {
+    font-weight: bold;
+    color: white;
+    background-color: darkgreen;
+    box-shadow: darkgreen 0 0 10px;
+}
+
+#difficulty0 #mine_count, #difficulty0 #moves_made, #difficulty0 #game_status, #difficulty0 #timer {
+    padding: 10px 20px;
+    margin: 5px 27px;
+    background-color: darkgreen;
+    border-radius: 10px;
+}
+
+#difficulty0 #cell0.adj-M, #difficulty0 #cell1.adj-M {
+    background-color: red;
+}
+
+#difficulty0 #cell0.flagged, #difficulty0 #cell1.flagged {
+    background-color: darkgreen;
+}

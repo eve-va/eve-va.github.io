@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-start {
+    margin: 1px auto;
+    display: block;
+    width: 12em;
+    height: 3em;
+    line-height: 3em;
+    font-size: 2em;
+    font-family: Philosopher, serif;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 10px;
+}
+
+#beginner:hover  {
+    border: 3px solid darkgreen;
+    color: darkgreen;
+    background-color: transparent;
+}
+
+#intermidiate:hover {
+    border: 3px solid navy ;
+    color: navy;
+    background-color: transparent;
+}
+
+#advanced:hover {
+    border: 3px solid indigo;
+    color: indigo;
+    background-color: transparent;
+}
+
+#beginner {
+    font-weight: bold;
+    color: #ffffff;
+    background-color: seagreen;
+    box-shadow: darkgreen 0 0 10px;
+    border: 3px solid darkgreen;
+}
+
+#intermidiate {
+    font-weight: bold;
+    color: #ffffff;
+    background-color: royalblue;
+    box-shadow: navy 0 0 10px;
+    border: 3px solid navy ;
+}
+
+#advanced {
+    font-weight: bold;
+    color: #ffffff;
+    background-color: darkviolet;
+    box-shadow: indigo 0 0 10px;
+    border: 3px solid indigo;
+}  
+  
+#game_container {
+    float: left;
+    margin: 20px;
+}
+  
+.row {
+    display: flex;
+}
+
+.status_msg {
+    color: #ffffff;
+    margin: 10px;
+}
+    
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+h3 {
+    padding: 10px;
+}
+
+#cell0, #cell1 {
+    
+}
