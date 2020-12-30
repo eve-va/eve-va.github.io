@@ -1,7 +1,5 @@
 #difficulty0 h1, #difficulty0 h3 {
-    text-align: center;
     color: darkgreen;
-    margin: 10px auto;
 }
 
 #difficulty0 #game_container{
@@ -16,26 +14,17 @@
     padding: 10px;
     background-color: seagreen;
     font-size: 20px;
-    text-align: center;
-    cursor: pointer;
-    transition-property: background-color;
-    transition-duration: 1s;
-    transition-timing-function: ease-out;
   }
   
 #difficulty0 #cell1 {
     background-color: lightgreen;
-}
-  
-#cell0.revealed, #cell0.flagged, #cell1.revealed, #cell1.flagged {
-    cursor: default;
 }
 
 #difficulty0 #cell0.revealed {
     background-color: #d0f0c0;
 }
 
-#difficulty0 #cell1.revealed {
+#cell1.revealed {
     background-color: white;
 }
   
@@ -46,14 +35,9 @@
     height: 3em;
     line-height: 3em;
     font-size: 1.5em;
-    text-decoration: none;
-    text-align: center;
-    cursor: pointer;
-    transition: .3s;
     border: 5px solid darkgreen;
     border-radius: 10px;
     color: darkgreen;
-    background-color: transparent;
 }
   
 #difficulty0 #new_game_button:hover {
