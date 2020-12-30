@@ -174,6 +174,8 @@ class Minesweeper {
       if (!cell.isRevealed && !cell.isFlagged && this.playing) {
         const cellElement = cell.getElement();
 
+        //обеспечение безопасного первого хода 
+        //если при первом нажатии попасть на мину, происойдет переинициализация
         if (parseInt(document.getElementById("moves_made").textContent, 10) === 1 && cell.isMine) {
             timer = false;
             sessionStorage.clear();
@@ -188,8 +190,6 @@ class Minesweeper {
   
         //если клетка оказалось миной - игра заканчивается
         if (cell.isMine && parseInt(document.getElementById("moves_made").textContent, 10) !== 0) {
-          //обеспечение безопасного первого хода 
-          //если при первом нажатии попасть на мину, происойдет переинициализация
           this.show();
           timer = false;
           this.status_msg = "Sorry, you lost!";
