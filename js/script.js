@@ -173,6 +173,12 @@ class Minesweeper {
       //если клетка еще не открыта и не отмечена
       if (!cell.isRevealed && !cell.isFlagged && this.playing) {
         const cellElement = cell.getElement();
+
+        if (parseInt(document.getElementById("moves_made").textContent, 10) === 1 && cell.isMine) {
+            timer = false;
+            sessionStorage.clear();
+            newGame();
+        }
   
         //к классам клетки добавляется "revealed" и "adj-значение" 
         cell.isRevealed = true;
@@ -181,10 +187,9 @@ class Minesweeper {
         this.validate();
   
         //если клетка оказалось миной - игра заканчивается
-        if (cell.isMine) {
+        if (cell.isMine && parseInt(document.getElementById("moves_made").textContent, 10) !== 0) {
           //обеспечение безопасного первого хода 
           //если при первом нажатии попасть на мину, происойдет переинициализация
-          if (+document.getElementById("moves_made") === 1) this.initialise();
           this.show();
           timer = false;
           this.status_msg = "Sorry, you lost!";
@@ -206,7 +211,7 @@ class Minesweeper {
     show() {
       for (let r = 0; r < this.settings["rows"]; r++) {
         for (let c = 0; c < this.settings["columns"]; c++) {
-          if (this.board[r][c].isMine) {
+          if (this.board[r][c].isMine && parseInt(document.getElementById("moves_made").textContent, 10) !== 0) {
             this.revealCell(this.board[r][c]);
           }
         }
@@ -258,7 +263,7 @@ class Minesweeper {
       this.save();
     }
 
-
+    //управление таймером
     countInterval() {
       setInterval(function() { 
         let elt = document.getElementById("timer");
