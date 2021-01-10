@@ -1,0 +1,26 @@
+{
+  "name": "eve-va.github.io",
+  "version": "1.0.0",
+  "description": "Minesweeper implementation",
+  "main": "index.html",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run -s lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eve-va/eve-va.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eve-va/eve-va.github.io/issues"
+  },
+  "homepage": "https://github.com/eve-va/eve-va.github.io#readme",
+  "devDependencies": {
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "lite-server": "^2.6.1"
+  }
+}
